@@ -1,0 +1,30 @@
+<app-dashboard></app-dashboard>
+
+<div class="parent1">
+    <div class="heading">
+        <div class="number-heading">Nr.</div>
+        <div class="customer-heading">Customer</div>
+        <div class="products-heading">Products</div>
+        <div class="amount-heading">Amount</div>
+        <div class="adress-heading">Adress</div>
+        <div class="date-heading">Placed On</div>
+        <div class="status-heading">status</div>
+        <div class="edit-heading">Edit</div>
+        <div class="delete-heading">Delete</div>
+    </div>
+
+    <div class="parent2" *ngFor="let order of orders; index as i;  paginate: { itemsPerPage: 10, currentPage: p }">
+        <div class="number">{{i+1}}</div>
+        <div class="customer">{{order.username}}</div>
+        <div class="products">
+            <div *ngFor="let product of order.productsTitle">{{product}}</div>
+        </div>
+        <div class="amount">${{order.amount}}</div>
+        <div class="adress">{{order.address}}</div>
+        <div class="date">{{order.createdAt.slice(0,10)}}</div>
+        <div class="status">{{order.status}}</div>
+        <div class="edit"><i routerLink="/order/{{order._id}}" class="fa-sharp fa-solid fa-pen-to-square"></i></div>
+        <div class="delete"><i (click)="deleteItem(order._id)" class="fa-solid fa-trash"></i></div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

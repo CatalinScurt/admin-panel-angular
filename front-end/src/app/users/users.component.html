@@ -1,0 +1,29 @@
+<app-dashboard></app-dashboard>
+
+<div class="parent1">
+    <div class="heading">
+        <div class="avatar-heading"><i class="fa-solid fa-user"></i></div>
+        <div class="name-heading">Nume</div>
+        <div class="name-heading">Prenume</div>
+        <div class="username-heading">Username</div>
+        <div class="email-heading">Email</div>
+        <div class="created-heading">First Login</div>
+        <div class="admin-heading">Admin</div>
+        <div class="edit-heading">Edit</div>
+        <div class="delete-heading">Delete</div>
+    </div>
+
+    <div class="parent2" *ngFor="let user of users |  paginate: { itemsPerPage: 10, currentPage: p }">
+        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+        <div class="name">{{user.firstName}}</div>
+        <div class="name">{{user.lastName}}</div>
+        <div class="username">{{user.username}}</div>
+        <div class="email">{{user.email}}</div>
+        <div class="created">{{user.createdAt.slice(0,10)}}</div>
+        <div class="admin">{{user.isAdmin ? 'Yes': 'No'}}</div>
+        <div class="edit"><i routerLink="/user/{{user._id}}" class="fa-sharp fa-solid fa-pen-to-square"></i>
+        </div>
+        <div class="delete"><i (click)="deleteItem(user._id)" class="fa-solid fa-trash"></i></div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

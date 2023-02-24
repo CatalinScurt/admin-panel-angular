@@ -1,0 +1,42 @@
+<div class="green">
+    <i class="fa-solid fa-users"></i>
+</div>
+<div class="edit">
+    <form class="form" id="form" [formGroup]="addForm" (ngSubmit)="submitForm()">
+        <div class="container">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Username..." formControlName="username">
+        </div>
+
+        <div class="container">
+            <label for="email">Email:</label>
+            <input type="text" name="email" placeholder="Email..." formControlName="email">
+        </div>
+
+        <div class="container">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password..." formControlName="password">
+        </div>
+
+        <div class="container">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" placeholder="First Name..." formControlName="firstName">
+        </div>
+
+        <div class="container">
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" placeholder="Last Name..." formControlName="lastName">
+        </div>
+
+        <div class="container">
+            <label for="Admin">Admin:</label>
+            <input type="text" name="Admin" placeholder="Admin..." formControlName="admin">
+        </div>
+
+        <button class="btn">Submit</button>
+    </form>
+    <div class="error">{{response.length>0 ? response: null}}</div>
+</div>
+<div class="violet">
+    <i class="fa-solid fa-user-plus"></i>
+</div>

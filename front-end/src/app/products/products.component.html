@@ -1,0 +1,28 @@
+<app-dashboard></app-dashboard>
+<div class="parent1">
+    <div class="heading">
+        <div class="img-heading">Image</div>
+        <div class="title-heading">Title</div>
+        <div class="price-heading">Full price</div>
+        <div class="new-price-heading">Actual price</div>
+        <div class="discount-heading">Discount</div>
+        <div class="seller-heading">Seller</div>
+        <div class="stock-heading">Stock</div>
+        <div class="edit-heading">Edit</div>
+        <div class="delete-heading">Delete</div>
+    </div>
+
+    <div class="parent2" *ngFor="let product of products | paginate: { itemsPerPage: 8, currentPage: p }">
+        <div><img src={{product.thumbnail}}></div>
+        <div class="title">{{product.title}}</div>
+        <div class="price">${{product.price}}</div>
+        <div class="new-price">${{(product.price - product.discountPercentage/100 * product.price).toFixed(2)}}</div>
+        <div class="discount">-{{product.discountPercentage}}%</div>
+        <div class="seller">{{product.seller}}</div>
+        <div class="stock">{{product.stock}} buc</div>
+        <div class="edit"><i routerLink="/products/{{product._id}}" class="fa-sharp fa-solid fa-pen-to-square"></i>
+        </div>
+        <div class="delete"><i (click)="deleteItem(product._id)" class="fa-solid fa-trash"></i></div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

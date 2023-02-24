@@ -1,0 +1,218 @@
+.parent1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 320px;
+    width: 850px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #636c79b0;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.parent2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #69696910;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.number {
+    text-align: center;
+    width: 50px;
+    font-size: 1rem;
+}
+
+.customer {
+    text-align: center;
+    width: 200px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+
+    i {
+        width: 20px;
+    }
+}
+
+.products {
+    text-align: center;
+    width: 250px;
+    font-size: 1.1rem;
+    margin-left: 1px;
+}
+
+.amount {
+    text-align: center;
+    width: 80px;
+    font-size: 1.1rem;
+    margin-left: 3px;
+}
+
+.adress {
+    text-align: center;
+    width: 300px;
+    font-size: 1.1rem;
+}
+
+.date {
+    text-align: center;
+    width: 150px;
+    font-size: 1.1rem;
+    background-color: #8BB7A2;
+    border-radius: 20px;
+    padding: 3px;
+    color: white;
+    margin-right: 3px;
+}
+
+.status {
+    text-align: center;
+    width: 100px;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+.edit {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+        color: rgb(252, 174, 30);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.delete {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+        color: rgb(204, 12, 12);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.number-heading {
+    text-align: center;
+    width: 50px;
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.customer-heading {
+    text-align: center;
+    width: 200px;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: #f1f1f1;
+}
+
+.products-heading {
+    text-align: center;
+    width: 250px;
+    font-size: 1.1rem;
+    margin-left: 1px;
+    color: #f1f1f1;
+}
+
+.amount-heading {
+    text-align: center;
+    width: 80px;
+    font-size: 1.1rem;
+    margin-left: 3px;
+    color: #f1f1f1;
+}
+
+.adress-heading {
+    text-align: center;
+    width: 300px;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+}
+
+.date-heading {
+    text-align: center;
+    width: 150px;
+    font-size: 1.1rem;
+    padding: 5px;
+    color: white;
+    color: #f1f1f1;
+}
+
+.status-heading {
+    text-align: center;
+    width: 100px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #f1f1f1;
+}
+
+i {
+    font-size: 1.2rem;
+}
+
+.edit-heading {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+    color: #f1f1f1;
+
+    i {
+        color: rgb(252, 174, 30);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.delete-heading {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+    color: #f1f1f1;
+
+    i {
+        color: rgb(204, 12, 12);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.6rem;
+        }
+    }
+}

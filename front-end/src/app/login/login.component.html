@@ -1,0 +1,12 @@
+<div class="login">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username..." formControlName="username">
+        <span *ngIf="username && username.invalid && username.touched">This input is required</span>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="password..." formControlName="password">
+        <span *ngIf="password && password.invalid && password.touched">This input is required</span>
+        <p *ngIf="apiService.error.length!==0">{{apiService.error}}</p>
+        <button class="btn" [disabled]="loginForm.invalid">Log In</button>
+    </form>
+</div>

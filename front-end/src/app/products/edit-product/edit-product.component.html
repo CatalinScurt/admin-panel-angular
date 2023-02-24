@@ -1,0 +1,83 @@
+<div class="edit">
+    <h1>Edit a product</h1>
+    <div id="form">
+
+        <div class="form">
+
+            <div class="left">
+                <div class="editProd">
+                    <label for="id">Id: </label>
+                    <input type="number" name="id" placeholder="id..." id="id" value={{product.id}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" placeholder="title..." id="title" value={{product.title}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" placeholder="description..." id="description"
+                        value={{product.description}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" placeholder="price..." id="price" value={{product.price}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="discount">Discount:</label>
+                    <input type="number" name="discount" placeholder="discount..." id="discountPercentage"
+                        value={{product.discountPercentage}}>
+                </div>
+            </div>
+
+            <div class="right">
+
+                <div class="editProd">
+                    <label for="rating">Rating:</label>
+                    <input type="number" name="rating" placeholder="rating..." id="rating" value={{product.rating}}
+                        readonly>
+                </div>
+
+                <div class="editProd">
+                    <label for="seller">Seller:</label>
+                    <input type="text" name="seller" placeholder="seller..." id="seller" value={{product.seller}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="stock">Stock:</label>
+                    <input type="number" name="stock" placeholder="stock..." id="stock" value={{product.stock}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="brand">Brand:</label>
+                    <input type="text" name="brand" placeholder="brand..." id="brand" value={{product.brand}}>
+                </div>
+
+                <div class="editProd">
+                    <label for="id">Category:</label>
+                    <input type="text" name="category" placeholder="category..." id="category"
+                        value={{product.category}}>
+                </div>
+            </div>
+
+            <div class="image">
+                <div class="editProd">
+                    <label for="cover">Cover:</label>
+                    <input type="text" name="cover" placeholder="image..." id="thumbnail" value={{product.thumbnail}}>
+                </div>
+
+                <div *ngFor="let img of product.images; index as i" class="addImgContainer">
+                    <label for='images {{i}}'>Image {{i+1}}: </label>
+                    <input type="text" name='images {{i}}' id='images{{i}}' placeholder='image {{i+1}}' value={{img}}>
+                </div>
+            </div>
+        </div>
+
+        <button class="btnSubmit" (click)="submitForm()">Submit</button>
+    </div>
+    <button class="addImg" (click)="addInput()">Add img</button>
+    <div>{{response.length>0 ? response: null}}</div>
+</div>

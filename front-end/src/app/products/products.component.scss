@@ -1,0 +1,198 @@
+.parent1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 320px;
+    width: 850px;
+    border-radius: 20px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #636c79b0;
+    color: #f1f1f1;
+    padding: 8px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.parent2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:nth-child(odd) {
+        background-color: #69696910;
+    }
+}
+
+.img-heading {
+    text-align: center;
+    width: 80px;
+    font-size: 1.1rem;
+}
+
+
+
+.title-heading {
+    text-align: center;
+    width: 250px;
+    font-size: 1.1rem;
+}
+
+.price-heading {
+    text-align: center;
+    width: 100px;
+    font-size: 1.1rem;
+}
+
+.new-price-heading {
+    text-align: center;
+    width: 150px;
+    font-size: 1.1rem;
+}
+
+.discount-heading {
+    text-align: center;
+    width: 100px;
+    font-size: 1.1rem;
+}
+
+.seller-heading {
+    text-align: center;
+    width: 150px;
+    font-size: 1.1rem;
+}
+
+.stock-heading {
+    text-align: center;
+    width: 100px;
+    font-size: 1.1rem;
+}
+
+i {
+    font-size: 1.3rem;
+}
+
+.edit-heading {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+
+    i {
+        color: rgb(252, 174, 30);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.delete-heading {
+    font-size: 1.1rem;
+    width: 100px;
+    text-align: center;
+
+    i {
+        color: rgb(204, 12, 12);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+img,
+.img {
+    text-align: center;
+    width: 80px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+
+
+
+.title {
+    text-align: center;
+    width: 250px;
+    font-size: 1rem;
+}
+
+.price {
+    text-align: center;
+    width: 100px;
+    font-size: 1rem;
+}
+
+.new-price {
+    text-align: center;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.discount {
+    text-align: center;
+    width: 100px;
+    font-size: 1rem;
+}
+
+.seller {
+    text-align: center;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.stock {
+    text-align: center;
+    width: 100px;
+    font-size: 1rem;
+}
+
+i {
+    font-size: 1.3rem;
+}
+
+.edit {
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+        color: rgb(252, 174, 30);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.delete {
+    font-size: 1rem;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+        color: rgb(204, 12, 12);
+        opacity: 0.5;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            font-size: 1.8rem;
+        }
+    }
+}

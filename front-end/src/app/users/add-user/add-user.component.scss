@@ -1,0 +1,113 @@
+.edit {
+    // background-color: #8BB7A2;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.green {
+    width: 200px;
+    height: 200px;
+    background-color: #E7D4A3;
+    position: absolute;
+    margin-left: 900px;
+    margin-top: -90px;
+    box-shadow: 10px 10px 10px grey;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+
+    i {
+        margin-top: 35%;
+        font-size: 4rem;
+        color: #ebe4d2;
+    }
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+
+
+
+    ​ input {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 300px;
+        display: flex;
+        align-items: left;
+        padding-top: 20px;
+
+        input {
+            padding: 5px;
+            border: 0px;
+            border-bottom: 1px solid grey;
+            outline: none;
+            cursor: text;
+        }
+
+        label {
+            width: 100px;
+
+        }
+    }
+
+    .btn {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: #8BB7A2;
+        color: white;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+            background-color: #689680;
+        }
+    }
+}
+
+.violet {
+    width: 200px;
+    height: 200px;
+    background-color: #696aa5;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -140px;
+    box-shadow: 0px 10px 10px grey;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+
+
+    i {
+        margin-top: 35%;
+        font-size: 4rem;
+        color: #c2c2e4ee;
+    }
+
+}
+
+.error {
+    margin-left: 40%;
+    color: rgb(226, 106, 106);
+    padding-bottom: 20px;
+}

@@ -1,0 +1,51 @@
+<div class="statistics">
+    <div class="sales">
+        <h2>Sales</h2>
+        <div class="data">
+            <h1>${{orderStats[0]?.total}}</h1>
+            <p>{{
+                orderStats[1]?.total >
+                orderStats[0]?.total ? '-' : '+'}}
+                {{math.abs((1 - math.max(orderStats[0]?.total,orderStats[1]?.total) /
+                math.min(orderStats[0]?.total,orderStats[1]?.total))*100).toFixed(1)}}%
+            </p>
+            <i class="fa-sharp fa-solid fa-arrow-up" *ngIf="orderStats[1]?.total < orderStats[0]?.total"></i>
+            <i class="fa-solid fa-arrow-down" *ngIf="orderStats[1]?.total > orderStats[0]?.total"></i>
+        </div>
+        <p>Compared to last mounth</p>
+    </div>
+    <div class="users">
+        <h2>Users</h2>
+        <div class="data">
+            <h1>{{userStats[userStats.length - 1].total}}</h1>
+            <p> {{
+                userStats[userStats.length - 2]?.total >
+                userStats[userStats.length - 1]?.total ? '-' : '+'}}
+                {{userStats[userStats.length - 2]?.total - userStats[userStats.length - 1]?.total}}
+            </p>
+            <i class="fa-sharp fa-solid fa-arrow-up"
+                *ngIf="userStats[userStats.length - 2]?.total < userStats[userStats.length - 1]?.total"></i>
+            <i class="fa-solid fa-arrow-down"
+                *ngIf="userStats[userStats.length - 2]?.total > userStats[userStats.length - 1]?.total"></i>
+        </div>
+        <p>Compared to last mounth</p>
+    </div>
+</div>
+<div class="chart">
+    <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'360px'}" class="chart">
+    </canvasjs-chart>
+</div>
+<div class="container">
+    <div class="section">
+        <div class="add" routerLink="/addProduct">Add Product</div>
+        <div class="edit" routerLink="/products">Edit Product</div>
+    </div>
+    <div class="section">
+        <div class="add" routerLink="/addUser">Add User</div>
+        <div class="edit" routerLink="/users">Edit User</div>
+    </div>
+    <div class="section">
+        <div class="add" routerLink="/addOrder">Add Order</div>
+        <div class="edit" routerLink="/orders">Edit Order</div>
+    </div>
+</div>

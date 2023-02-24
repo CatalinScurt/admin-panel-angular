@@ -1,0 +1,37 @@
+<div class="edit">
+    <h1>Add a new order</h1>
+    <form class="form" [formGroup]="addForm" (ngSubmit)="submitForm()">
+
+        <div class="container">
+            <label for="user">Costumer: </label>
+            <input type="text" name="user" placeholder="user..." formControlName="user">
+        </div>
+
+        <div class="container">
+            <label for="amount">Amount: </label>
+            <input type="number" name="amount" placeholder="amount..." formControlName="amount">
+        </div>
+
+        <div class="container">
+            <label for="address">Address: </label>
+            <input type="text" name="address" placeholder="address..." formControlName="address">
+        </div>
+
+        <div class="container">
+            <label for="status">Status: </label>
+            <input type="text" name="status" placeholder="status..." formControlName="status">
+        </div>
+
+        <div *ngFor="let product of numberOfProducts; index as i">
+            <label for='product {{i}}'>Product {{i+1}}: </label>
+            <input type="text" id='product{{i}}' placeholder='product...'>
+            <label for='quantity {{i}}'>Quantity {{i+1}}: </label>
+            <input type="number" id='quantity{{i}}' placeholder='quantity...'>
+        </div>
+
+
+        <button class="btn">Submit</button>
+    </form>
+    <button class="addProduct" (click)="addInput()">Add product</button>
+    <div>{{response.length>0 ? response: null}}</div>
+</div>

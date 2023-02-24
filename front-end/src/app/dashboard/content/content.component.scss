@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7D4A3;
+    width: 99%;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    margin-left: 20px;
+
+}
+
+.add {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+
+    &:hover {
+        background-color: #f3e4bd;
+        border-radius: 20px;
+    }
+}
+
+.edit {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(68, 68, 68);
+
+    &:hover {
+        background-color: #f3e4bd;
+        border-radius: 20px;
+    }
+}
+
+.statistics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.sales {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px rgb(83, 83, 83);
+    background-color: #8BB7A2;
+
+    h2,
+    p,
+    div {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+
+}
+
+.users {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px rgb(83, 83, 83);
+    background-color: #696aa5;
+
+
+    h2,
+    p,
+    div {
+        margin-left: 15px;
+        font-size: 0.9rem;
+    }
+
+}
+
+.data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1,
+    p,
+    i {
+        margin-left: 15px;
+    }
+
+    .fa-arrow-up {
+        color: green;
+    }
+
+    .fa-arrow-down {
+        color: red;
+    }
+
+}
+
+.chart {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 95%;
+}
